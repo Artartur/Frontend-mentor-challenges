@@ -1,0 +1,27 @@
+.success__container {
+  div {
+    span {
+      h1 {
+        color: var(--dark-slate-grey);
+        font-size: 40px;
+      }
+      p {
+        max-width: 320px;
+      }
+    }
+    button {
+      background-color: var(--dark-slate-grey);
+      border: none;
+      border-radius: 7px;
+      color: white;
+      height: 55px;
+      margin-top: 30%;
+      outline: none;
+      padding: 6%;
+
+      &:hover {
+        background-color: var(--tomato);
+      }
+    }
+  }
+}
