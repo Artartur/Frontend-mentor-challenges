@@ -1,23 +1,62 @@
 .success__container {
+  background-color: var(white);
+
+  @media (min-width: 1200px) {
+    background-color: #32353d;
+  }
   div {
+    background-color: var(--white);
+    width: 100%;
+
+    @media (min-width: 1200px) {
+      border-radius: 30px;
+      width: 400px;
+    }
+
+    img {
+      margin: 10% 0% 8% 5%;
+
+      @media (min-width: 1200px) {
+        margin: 10% 0% 5% 10%;
+      }
+    }
+
     span {
+      margin: 0 5%;
+
+      @media (min-width: 1200px) {
+        margin: 0 10%;
+      }
       h1 {
         color: var(--dark-slate-grey);
         font-size: 40px;
+
+        @media (min-width: 1200px) {
+          font-size: 46px;
+        }
       }
       p {
-        max-width: 320px;
+        font-size: 16px;
+        max-width: 310px;
+
+        @media (min-width: 1200px) {
+          font-size: 14px;
+          max-width: 320px;
+        }
       }
     }
     button {
       background-color: var(--dark-slate-grey);
-      border: none;
-      border-radius: 7px;
-      color: white;
       height: 55px;
-      margin-top: 30%;
+      margin: 20% 0% 8% 5%;
       outline: none;
-      padding: 6%;
+      width: 320px;
+
+      @media (min-width: 1200px) {
+        height: 40px;
+        margin: 5% 0 10% 10%;
+        width: 80%;
+      }
 
       &:hover {
         background-color: var(--tomato);

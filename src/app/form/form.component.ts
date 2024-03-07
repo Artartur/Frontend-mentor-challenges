@@ -17,12 +17,18 @@ export class FormComponent {
   changeBorderColor() {
     if (this.email == "") {
       this.isClickedValue.emit((this.isClicked = false));
-      return "border-secondary";
+      return "border-secondary-subtle";
     } else if (this.email !== "" && !this.isEmailValid) {
       this.isClickedValue.emit((this.isClicked = false));
       return "bg-danger-subtle border-danger text-danger-emphasis";
     }
     return "bg-success-subtle border-success text-success";
+  }
+
+  changeImageByScreenSize() {
+    return window.innerWidth <= 300 && window.innerWidth >= 420
+      ? "assets/illustration-sign-up-mobile.svg"
+      : "assets/illustration-sign-up-desktop.svg";
   }
 
   onSubmit() {

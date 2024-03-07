@@ -1,14 +1,11 @@
-<div class="success__container d-flex justify-content-center vh-100 vw-100">
-  <div class="d-flex justify-content-center flex-column m-4">
-    <img
-      alt="Icone de checklist marcado"
-      class="my-4"
-      src="assets/icon-list.svg"
-      width="50"
-    />
+<div
+  class="success__container align-items-center d-flex justify-content-center vh-100 vw-100"
+>
+  <div class="d-flex justify-content-center flex-column">
+    <img alt="Checklist icon selected" src="assets/icon-list.svg" width="50" />
     <span>
-      <h1 class="mb-4 fw-bold">Thanks for subscribing!</h1>
-      <p class="m-0">
+      <h1 class="fw-bold mb-3">Thanks for subscribing!</h1>
+      <p>
         A confirmation email has been sent to
         <strong class="fw-bold">{{ emailValue }}</strong
         >. Please open it and click the button inside to confirm your
@@ -16,7 +13,7 @@
       </p>
     </span>
     <button
-      class="align-items-center d-flex justify-content-center"
+      class="align-items-center border-0 d-flex justify-content-center p-4 rounded-3 text-light"
       (click)="onSubmit()"
     >
       Dismiss message

@@ -1,41 +1,50 @@
 <main
-  class="form__container align-items-center justify-content-center vh-100 vw-100"
+  class="form__container align-items-center d-flex justify-content-center vh-100 vw-100"
 >
-  <div class="align-items-center d-flex justify-content-center">
-    <img alt="Ilustração mobile" src="assets/illustration-sign-up-mobile.svg" />
+  <div
+    class="form__container-content align-items-center d-flex justify-content-center"
+  >
+    <div class="form__container-content-img">
+      <img
+        alt="Dashboard ilustration"
+        class="w-100"
+        [src]="changeImageByScreenSize()"
+      />
+    </div>
     <form
       action=""
-      class="align-items-center d-flex flex-column justify-content-center w-100"
+      class="align-items-center d-flex flex-column justify-content-center"
     >
-      <div class="mb-4 me-4 mt-5">
-        <span>
-          <h1>Stay updated!</h1>
+      <div>
+        <span class="form__text-block">
+          <h1 class="fw-bold">Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
         </span>
-        <ul class="my-4 p-0 w-100">
+        <ul class="p-0">
           <li>
-            <img alt="Icone de checklist marcado" src="assets/icon-list.svg" />
+            <img alt="Checklist icon selected" src="assets/icon-list.svg" />
             <p>Product discovery and building what matters</p>
           </li>
           <li>
-            <img alt="Icone de checklist marcado" src="assets/icon-list.svg" />
+            <img alt="Checklist icon selected" src="assets/icon-list.svg" />
             <p>Measuring to ensure updates are a sucess</p>
           </li>
           <li>
-            <img alt="Icone de checklist marcado" src="assets/icon-list.svg" />
+            <img alt="Checklist icon selected" src="assets/icon-list.svg" />
             <p>And much more!</p>
           </li>
         </ul>
-        <div class="d-flex flex-column mb-2 mt-4">
+        <div class="d-flex flex-column">
           <div
             class="align-items-center d-flex flex-row justify-content-between"
           >
-            <label class="mb-2" for="email">Email address</label>
+            <label for="email">Email address</label>
             <p *ngIf="!isEmailValid && email !== ''" class="text-danger mb-2">
               Valid email required
             </p>
           </div>
           <input
+            class="rounded-3"
             id="email"
             name="email"
             placeholder="email@company.com"
@@ -46,7 +55,7 @@
           />
         </div>
         <button
-          class="border-0 fw-bold my-3"
+          class="border-0 fw-bold my-3 rounded-3 text-light"
           type="submit"
           [disabled]="!isEmailValid"
           [style]="
