@@ -2,7 +2,7 @@
   class="home__container align-items-center justify-content-center vh-100 vw-100"
 >
   <div class="align-items-center d-flex justify-content-center">
-    <img src="assets/illustration-sign-up-mobile.svg" alt="" />
+    <img alt="Ilustração mobile" src="assets/illustration-sign-up-mobile.svg" />
     <form
       action=""
       class="align-items-center d-flex flex-column justify-content-center w-100"
@@ -36,10 +36,10 @@
             </p>
           </div>
           <input
-            type="search"
-            name="email"
             id="email"
+            name="email"
             placeholder="email@company.com"
+            type="search"
             (input)="validateEmail()"
             [class]="changeBorderColor()"
             [(ngModel)]="email"
@@ -48,6 +48,12 @@
         <button
           class="border-0 fw-bold my-3"
           type="submit"
+          [disabled]="!isEmailValid"
+          [style]="
+            email == '' || (email !== '' && !isEmailValid)
+              ? 'background-color: var(--dark-slate-grey); cursor: not-allowed'
+              : 'background-color: var(--tomato);'
+          "
           (click)="onSubmit()"
         >
           Subscribe to monthly newsletter

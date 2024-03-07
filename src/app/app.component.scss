@@ -11,14 +11,10 @@
   form {
     div {
       button {
-        background-color: var(--dark-slate-grey);
         border-radius: 10px;
         color: white;
         height: 55px;
         width: 300px;
-        &:hover {
-          background-color: var(--tomato);
-        }
       }
 
       div {
@@ -28,11 +24,12 @@
           border: 2px solid var(--grey);
           border-radius: 7px;
           height: 55px;
+          outline: none;
           padding: 6%;
-          outline:none;
         }
 
-        label, p{
+        label,
+        p {
           font-size: 12px;
           font-weight: bold;
         }
