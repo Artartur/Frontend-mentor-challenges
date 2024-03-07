@@ -15,7 +15,7 @@ export class AppComponent {
       ? "border-secondary"
       : this.email !== "" && !this.isEmailValid
       ? "bg-danger-subtle border-danger text-danger-emphasis"
-      : "border-success";
+      : "bg-success-subtle border-success text-success";
   }
 
   onSubmit() {
