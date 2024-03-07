@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
   selector: "app-form",
@@ -6,6 +6,9 @@ import { Component } from "@angular/core";
   styleUrl: "./form.component.scss",
 })
 export class FormComponent {
+  @Output() emailValue: EventEmitter<string> = new EventEmitter<string>();
+  @Output() isClickedValue: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   email: string = "";
   isClicked: boolean = false;
   isEmailValid: boolean = true;
@@ -13,10 +16,10 @@ export class FormComponent {
 
   changeBorderColor() {
     if (this.email == "") {
-      this.isClicked = false;
+      this.isClickedValue.emit((this.isClicked = false));
       return "border-secondary";
     } else if (this.email !== "" && !this.isEmailValid) {
-      this.isClicked = false;
+      this.isClickedValue.emit((this.isClicked = false));
       return "bg-danger-subtle border-danger text-danger-emphasis";
     }
     return "bg-success-subtle border-success text-success";
@@ -24,10 +27,10 @@ export class FormComponent {
 
   onSubmit() {
     if (this.isEmailValid) {
-      this.isClicked = true;
-      return this.email;
+      this.isClickedValue.emit((this.isClicked = true));
+      return this.emailValue.emit(this.email);
     }
-    return console.log("false");
+    return false;
   }
 
   validateEmail() {
