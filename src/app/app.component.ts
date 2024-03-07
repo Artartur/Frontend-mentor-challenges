@@ -6,5 +6,16 @@ import { Component } from "@angular/core";
   styleUrl: "./app.component.scss",
 })
 export class AppComponent {
+  emailValue: string;
+  isClicked: boolean;
+
   constructor() {}
+
+  getEmailValue(email: string) {
+    this.emailValue = email;
+  }
+
+  getIsClickedValue(clicked: boolean) {
+    this.isClicked = clicked;
+  }
 }

@@ -28,6 +28,7 @@ export class FormComponent {
   onSubmit() {
     if (this.isEmailValid) {
       this.isClickedValue.emit((this.isClicked = true));
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return this.emailValue.emit(this.email);
     }
     return false;

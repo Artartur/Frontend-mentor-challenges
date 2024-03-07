@@ -1,3 +1,14 @@
 <main>
-  <app-form></app-form>
+  <app-form
+    (emailValue)="getEmailValue($event)"
+    (isClickedValue)="getIsClickedValue($event)"
+    *ngIf="!isClicked"
+  ></app-form>
+
+  <app-success
+    (isClickedSuccess)="isClicked = false"
+    [emailValue]="emailValue"
+    [isClicked]="isClicked"
+    *ngIf="isClicked"
+  ></app-success>
 </main>
