@@ -7,19 +7,27 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   email: string = "";
+  isClicked: boolean = false;
   isEmailValid: boolean = true;
   constructor() {}
 
   changeBorderColor() {
-    return this.email == ""
-      ? "border-secondary"
-      : this.email !== "" && !this.isEmailValid
-      ? "bg-danger-subtle border-danger text-danger-emphasis"
-      : "bg-success-subtle border-success text-success";
+    if (this.email == "") {
+      this.isClicked = false;
+      return "border-secondary";
+    } else if (this.email !== "" && !this.isEmailValid) {
+      this.isClicked = false;
+      return "bg-danger-subtle border-danger text-danger-emphasis";
+    }
+    return "bg-success-subtle border-success text-success";
   }
 
   onSubmit() {
-    return this.isEmailValid ? console.log("true") : console.log("false");
+    if (this.isEmailValid) {
+      this.isClicked = true;
+      return this.email;
+    }
+    return console.log("false");
   }
 
   validateEmail() {
