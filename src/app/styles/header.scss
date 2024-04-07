@@ -1,0 +1,25 @@
+.header__container {
+  nav {
+    div {
+      background-color: rgba(48, 48, 48, 0.459);
+      ul {
+        cursor: pointer;
+
+        li {
+          margin-left: 10%;
+          &:first-child {
+            margin-top: 40%;
+          }
+
+          & + li {
+            margin-top: 15%;
+          }
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
