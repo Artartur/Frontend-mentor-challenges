@@ -1,0 +1,50 @@
+.header__container {
+  ul {
+    li {
+      @media (min-width: 720px) {
+        margin: 0 20px;
+
+        a {
+          color: var(--dark-grayish-blue);
+
+          &:hover {
+            color: var(--soft-red);
+          }
+        }
+      }
+    }
+  }
+
+  .showMenu {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+
+    &__navbar {
+      li {
+        &:first-child {
+          margin: 30% 20px 15px 20px;
+        }
+
+        & + li {
+          margin: 10px 20px;
+
+          @media(min-width: 640px){
+            margin: 15px 20px;
+          }
+        }
+
+        a {
+          color: var(--very-dark-blue);
+
+          &:hover {
+            color: var(--soft-red);
+          }
+
+          @media (min-width: 640px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
