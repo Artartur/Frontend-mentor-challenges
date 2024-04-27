@@ -13,7 +13,7 @@ export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="header__container flex items-center p-3 ">
+    <header className="header__container flex items-center p-3 desktop:mb-6">
       <div className="header__container-content flex items-center justify-between w-full desktop:justify-around">
         <Link className="ms-2 desktop:me-12" href="/">
           <Image src={Logo} alt="logo" width={40} />
