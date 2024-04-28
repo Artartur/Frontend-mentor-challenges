@@ -30,8 +30,8 @@
       }
 
       img {
-        width: 100%;
         height: 200px;
+        width: 100%;
 
         @media (min-width: 1200px) {
           width: 550px;
@@ -42,17 +42,17 @@
     .mainTopic__texts {
       h1 {
         @media (min-width: 1200px) {
-          width: 50%;
           font-size: 42px;
+          width: 50%;
         }
       }
 
       button {
         background-color: var(--soft-red);
         color: var(--off-white);
+        font-size: 14px;
         height: 35px;
         width: 220px;
-        font-size: 14px;
       }
 
       p {
