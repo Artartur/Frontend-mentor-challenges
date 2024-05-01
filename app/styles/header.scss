@@ -1,0 +1,76 @@
+.header__container {
+  .avatar {
+    @media (min-width: 640px) {
+      border: 2px solid var(--primary-color);
+      border-radius: 100%;
+      height: 35px;
+      width: 40px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 40px;
+      width: 50px;
+    }
+  }
+
+  &-content {
+    @media (min-width: 1200px) {
+      border-bottom: 2px solid var(--light-grayish-blue);
+      width: 950px;
+    }
+
+    &-left {
+      &-showMenu {
+        background-color: rgba(0, 0, 0, 0.76);
+        ul {
+          background-color: var(--white);
+          li {
+            margin: 30% 0 5% 10%;
+
+            @media (min-width: 640px) {
+              margin: 20% 0 3% 6%;
+            }
+
+            & + li {
+              margin: 5% 0 5% 10%;
+
+              @media (min-width: 640px) {
+                margin: 5% 0 3% 6%;
+              }
+            }
+
+            a {
+              color: black;
+              font-weight: bold;
+
+              &:hover {
+                color: var(--primary-color);
+              }
+            }
+          }
+        }
+      }
+
+      &-navbar {
+        ul {
+          margin-top: 8px;
+          li {
+            margin-right: 5%;
+            & + li {
+              margin: 0 5%;
+            }
+
+            a {
+              color: var(--grayish-blue);
+              &:hover {
+                color: var(--dark-grayish-blue);
+                border-bottom: 3px solid var(--primary-color);
+                padding-bottom: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
